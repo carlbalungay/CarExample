@@ -24,33 +24,40 @@ namespace CarExample
             //
 
             float speedPerGear = TopSpeed / TotalNumberOfGears;
-
-            
+            float lowestSpeedPerGear = 0;
+            float highestSpeedPerGear = 0;
 
             if (chosenGear == "1")
             {
-                Console.WriteLine($"{gearSpeedLowest}mph - {speedPerGear}mph");
+                lowestSpeedPerGear = 0;
+                highestSpeedPerGear = speedPerGear;
             }
             else if (chosenGear == "2")
             {
-                Console.WriteLine($"{speedPerGear}mph - {speedPerGear * 2}mph");
+                lowestSpeedPerGear = speedPerGear;
+                highestSpeedPerGear = speedPerGear * 2;
             }
             else if (chosenGear == "3")
             {
-                Console.WriteLine($"{speedPerGear * 2}mph - {speedPerGear * 3}mph");
+                lowestSpeedPerGear = speedPerGear * 2;
+                highestSpeedPerGear = speedPerGear * 3;
             }
             else if (chosenGear == "4")
             {
-                Console.WriteLine($"{speedPerGear * 3}mph - {speedPerGear * 4}mph");
+                lowestSpeedPerGear = speedPerGear * 3;
+                highestSpeedPerGear = speedPerGear * 4;
             }
             else if (chosenGear == "5")
             {
-                Console.WriteLine($"{speedPerGear * 4}mph - {speedPerGear * 5}mph");
+                lowestSpeedPerGear = speedPerGear * 4;
+                highestSpeedPerGear = speedPerGear * 5;
             }
             else if (chosenGear == "6")
             {
-                Console.WriteLine($"{speedPerGear * 5}mph - {speedPerGear * 6}mph");
+                lowestSpeedPerGear = speedPerGear * 5;
+                highestSpeedPerGear = speedPerGear * 6;
             }
+            Console.WriteLine($"{lowestSpeedPerGear}mph - {highestSpeedPerGear}mph");
         }
     }
 }
