@@ -38,14 +38,6 @@ namespace CarExample
                 Console.WriteLine("car doesnt exist");
             }
 
-            //display another option to view gear speeds for different cars ,1 - 0-10% of max speed 2, 10%-20% of max speed, 3- 20%-50%, 4- 50%-65%, 5- 65%-80%, 6- 80%-100
-
-            // 1 0-12% 2 12-24% 2 24-36% 3 36-48% 4 48-60% 5 60-100%
-
-            // 1 0 - 15% 2 15-25% 3 25-55% 4 55-100%
-
-
-
         }
 
         static void SelectCar(Car car)

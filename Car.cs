@@ -15,34 +15,40 @@ namespace CarExample
         public void DisplayGearSpeed(string chosenGear)
         {
             float gearSpeedLowest = 0;
+            //correct speed per gear according to total number of gears
+            //total gears 6
+            //200 top speed
+            //split top speed into 6 gears
+            //find the percentage of each of the splits
+            //
+            //
+
+            float speedPerGear = TopSpeed / TotalNumberOfGears;
+
+            
             if (chosenGear == "1")
             {
-                Console.WriteLine($"{gearSpeedLowest}mph - {TopSpeed * 0.1f}mph");
+                Console.WriteLine($"{gearSpeedLowest}mph - {speedPerGear}mph");
             }
             else if (chosenGear == "2")
             {
-                gearSpeedLowest = TopSpeed * 0.1f;
-                Console.WriteLine($"{gearSpeedLowest}mph - {TopSpeed * 0.2f}mph");
+                Console.WriteLine($"{speedPerGear}mph - {speedPerGear * 2}mph");
             }
             else if (chosenGear == "3")
             {
-                gearSpeedLowest = TopSpeed * 0.2f;
-                Console.WriteLine($"{gearSpeedLowest}mph - {TopSpeed * 0.5f}mph");
+                Console.WriteLine($"{gearSpeedLowest * 2}mph - {speedPerGear * 3}mph");
             }
             else if (chosenGear == "4")
             {
-                gearSpeedLowest = TopSpeed * 0.5f;
-                Console.WriteLine($"{gearSpeedLowest}mph - {TopSpeed * 0.65f}mph");
+                Console.WriteLine($"{gearSpeedLowest * 3}mph - {speedPerGear * 4}mph");
             }
             else if (chosenGear == "5")
             {
-                gearSpeedLowest = TopSpeed * 0.65f;
-                Console.WriteLine($"{gearSpeedLowest}mph - {TopSpeed * 0.80f}mph");
+                Console.WriteLine($"{speedPerGear * 4}mph - {speedPerGear * 5}mph");
             }
             else if (chosenGear == "6")
             {
-                gearSpeedLowest = TopSpeed * 0.80f;
-                Console.WriteLine($"{gearSpeedLowest}mph - {TopSpeed}mph");
+                Console.WriteLine($"{speedPerGear * 5}mph - {speedPerGear * 6}mph");
             }
         }
     }
