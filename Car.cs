@@ -26,6 +26,7 @@ namespace CarExample
             float speedPerGear = TopSpeed / TotalNumberOfGears;
 
             
+
             if (chosenGear == "1")
             {
                 Console.WriteLine($"{gearSpeedLowest}mph - {speedPerGear}mph");
@@ -36,11 +37,11 @@ namespace CarExample
             }
             else if (chosenGear == "3")
             {
-                Console.WriteLine($"{gearSpeedLowest * 2}mph - {speedPerGear * 3}mph");
+                Console.WriteLine($"{speedPerGear * 2}mph - {speedPerGear * 3}mph");
             }
             else if (chosenGear == "4")
             {
-                Console.WriteLine($"{gearSpeedLowest * 3}mph - {speedPerGear * 4}mph");
+                Console.WriteLine($"{speedPerGear * 3}mph - {speedPerGear * 4}mph");
             }
             else if (chosenGear == "5")
             {
