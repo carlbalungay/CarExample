@@ -7,8 +7,6 @@ namespace CarExample
     {
         static void Main(string[] args)
         {
-
-            //selection of cars and choose one and it gives the details of the car, number of gears, top speed, make, colour.
             Car nissan = CreateNissan();
             Car mclaren = CreateMclaren();
             Car tesla = CreateCar("3", 6, "Tesla", "white", "truck", 200);

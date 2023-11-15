@@ -14,19 +14,57 @@ namespace CarExample
 
         public void DisplayGearSpeed(string chosenGear)
         {
-            float gearSpeedLowest = 0;
-            //correct speed per gear according to total number of gears
-            //total gears 6
-            //200 top speed
-            //split top speed into 6 gears
-            //find the percentage of each of the splits
-            //
-            //
+            DisplayGearSpeedSolution1(chosenGear);
+            DisplayGearSpeedSolution2(chosenGear);
+            DisplayGearSpeedSolution3(chosenGear);
+        }
 
+        private void DisplayGearSpeedSolution3(string chosenGear)
+        {
+            int chosenGearNumber = int.Parse(chosenGear);
+            if (chosenGearNumber > TotalNumberOfGears)
+            {
+                Console.WriteLine("incorrect number chosen");
+                Environment.Exit(0);
+            }
+            float speedPerGear = TopSpeed / TotalNumberOfGears;
+            float lowestSpeedPerGear = speedPerGear * (chosenGearNumber - 1);
+            float highestSpeedPerGear = speedPerGear * chosenGearNumber;
+
+            Console.WriteLine($"{lowestSpeedPerGear}mph - {highestSpeedPerGear}mph Solution3");
+
+        }
+        private void DisplayGearSpeedSolution2(string chosenGear)
+        {
+            int chosenGearNumber = int.Parse(chosenGear);
+            if (chosenGearNumber > TotalNumberOfGears)
+            {
+                Console.WriteLine("incorrect number chosen");
+                Environment.Exit(0);
+            }
             float speedPerGear = TopSpeed / TotalNumberOfGears;
             float lowestSpeedPerGear = 0;
             float highestSpeedPerGear = 0;
 
+            for (int i = 1; i <= TotalNumberOfGears; i++)
+            {
+                lowestSpeedPerGear = highestSpeedPerGear;
+                highestSpeedPerGear = speedPerGear * i;
+                if (chosenGearNumber == i)
+                {
+                    break;
+                }
+            }
+            Console.WriteLine($"{lowestSpeedPerGear}mph - {highestSpeedPerGear}mph Solution2");
+
+        }
+
+
+        private void DisplayGearSpeedSolution1(string chosenGear)
+        {
+            float speedPerGear = TopSpeed / TotalNumberOfGears;
+            float lowestSpeedPerGear = 0;
+            float highestSpeedPerGear = 0;
             if (chosenGear == "1")
             {
                 lowestSpeedPerGear = 0;
@@ -57,7 +95,7 @@ namespace CarExample
                 lowestSpeedPerGear = speedPerGear * 5;
                 highestSpeedPerGear = speedPerGear * 6;
             }
-            Console.WriteLine($"{lowestSpeedPerGear}mph - {highestSpeedPerGear}mph");
+            Console.WriteLine($"{lowestSpeedPerGear}mph - {highestSpeedPerGear}mph Solution 1");
         }
     }
 }
