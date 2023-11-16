@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 
 namespace CarExample
 {
+    //next lesson:constructors
     internal class Car
     {
         public string Id = " ";
