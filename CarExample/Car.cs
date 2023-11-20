@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace CarExample
 {
-    //next lesson:constructors
+    //next lesson: inheritence
     internal class Car
     {
         public string Id = " ";
@@ -13,6 +13,15 @@ namespace CarExample
         public string Make = " ";
         public string Colour = " ";
 
+        public Car(string id, string name, int totalNumberOfGears, float topSpeed, string make, string colour)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.TotalNumberOfGears = totalNumberOfGears;
+            this.TopSpeed = topSpeed;
+            this.Make = make;
+            this.Colour = colour;
+        }
         public void DisplayGearSpeed(string chosenGear)
         {
             DisplayGearSpeedSolution1(chosenGear);
